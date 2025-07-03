@@ -1,22 +1,14 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-	output: "export",
-	trailingSlash: true,
-	distDir: "out",
-	basePath: "",
-	assetPrefix: "",
+	poweredByHeader: false,
+	cleanDistDir: true,
+	transpilePackages: ["@example/shared"],
+	output: "standalone",
+	// outputFileTracingRoot: "../sst",
 	eslint: {
 		ignoreDuringBuilds: true,
 	},
-	typescript: {
-		ignoreBuildErrors: true,
-	},
-	images: {
-		unoptimized: true,
-	},
-	experimental: {
-		optimizeCss: false,
-	},
+	trailingSlash: true,
+	skipTrailingSlashRedirect: true,
 }
 
-module.exports = nextConfig
+export default nextConfig
