@@ -1,10 +1,8 @@
 {
-	"main": ".open-next/worker.js",
+	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "learning-analytics-hackathon",
 	"compatibility_date": "2025-07-02",
-	"compatibility_flags": ["nodejs_compat"],
 	"assets": {
-		"directory": "./dist",
-		"binding": "ASSETS"
+		"directory": "./dist"
 	}
 }
