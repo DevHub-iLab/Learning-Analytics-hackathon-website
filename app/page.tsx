@@ -129,16 +129,16 @@ export default function HackathonPage() {
                 Prizes
               </a>
               <a
-                href="#sponsors"
-                className="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors"
-              >
-                Sponsors
-              </a>
-              <a
                 href="#timeline"
                 className="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors"
               >
                 Timeline
+              </a>
+              <a
+                href="#sponsors"
+                className="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors"
+              >
+                Sponsors
               </a>
             </div>
           </div>
