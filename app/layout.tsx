@@ -23,7 +23,7 @@ export default function RootLayout({
             A collaboration between NTU and Imperial College London.
 			<br />
 			<br />
-			Made with <span className="inline-block align-middle text-red-500 mx-1">❤️</span>
+			Made with<span className="inline-block align-middle text-red-500 mx-1">❤️</span>
             by <span className="inline-block align-middle font-bold" style={{ color: "#ff9500" }}>DEVHUB_</span>
           </div>
         </footer>
