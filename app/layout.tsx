@@ -18,28 +18,25 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-screen flex flex-col bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
         <div className="flex-1 flex flex-col">{children}</div>
-        <footer className="bg-[#0F172A] border-t border-slate-800 py-6 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="text-slate-200 text-base font-medium">
+        <footer className="w-full bg-[#0F172A] py-6 mt-20 border-t border-slate-800">
+          <div className="text-center text-white text-base font-medium tracking-wide">
+            <div className="mb-2">
               A collaboration between NTU and Imperial College London.
-              <br />
-              <br />
-              Made with <span className="text-red-500">❤</span> by {" "}
+            </div>
+            <div>
+              Made with
+              <span className="inline-block align-middle text-red-500 mx-1">❤️</span>
+              by{" "}
               <a
-                className="inline-block align-middle rounded-xl transition-transform duration-300 hover:scale-110"
                 href="https://devhub.ilabccds.com"
+                className="inline-block font-bold align-middle transition-transform duration-200 hover:scale-110"
+                style={{ color: "#ff9500" }}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ verticalAlign: "middle" }}
               >
-                <img
-                  src="/images/devhublogo.svg"
-                  alt="DevHub Logo"
-                  className="inline h-7 w-auto align-middle"
-                  style={{ display: 'inline-block', verticalAlign: 'middle' }}
-                />
+                DEVHUB_
               </a>
-            </span>
+            </div>
           </div>
         </footer>
       </body>
