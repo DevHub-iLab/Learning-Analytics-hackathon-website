@@ -144,7 +144,7 @@ export default function HackathonPage() {
               </a>
               <a
                 href="#sponsors"
-                className="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors hidden sm:inline-block"
               >
                 Sponsors
               </a>
