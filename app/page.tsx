@@ -368,35 +368,6 @@ export default function HackathonPage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-slate-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Reimagine Learning Analytics @ NTU</h3>
-            <p className="text-gray-300 mb-6">A collaboration between NTU and Imperial College London</p>
-            <div className="flex justify-center space-x-6">
-              <Button
-                variant="outline"
-                className="border-gray-600 text-gray-300 hover:bg-gray-800 bg-transparent"
-                onClick={() => window.open("https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=SJPOFSq-K0aPwOF2WpsgSj392ylT8wdGmjkqzmxpPXhUMUJDVzROUzE3Q1JNUE1PUDEzM09QNk5TVS4u", "_blank")}
-              >
-                Pre-Register Now
-              </Button>
-              <Button
-                variant="ghost"
-                className="text-gray-300 hover:bg-gray-800"
-                onClick={() => window.open("mailto:info@ntu.edu.sg", "_blank")}
-              >
-                Contact Us
-              </Button>
-            </div>
-            <div className="mt-8 pt-8 border-t border-gray-700">
-              <p className="text-gray-400 text-sm">© 2025 Nanyang Technological University. All rights reserved.</p>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
