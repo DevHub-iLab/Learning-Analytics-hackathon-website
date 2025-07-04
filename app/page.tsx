@@ -99,7 +99,7 @@ export default function HackathonPage() {
         {
       date: "5th Nov 2025",
       title: "Award Ceremony",
-      description: "Celebrate the winners and outstanding solutions."
+      description: "Celebrate the winners and outstanding solutions.\n *The exact date of the joint conference/award ceremony is subject to change, pending final confirmation from Imperial College London."
     }
   ]
 
