@@ -35,7 +35,12 @@ export default function RootLayout({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                DEVHUB_
+                <img
+                    src="/images/devhublogo.svg"
+                    alt="DevHub Logo"
+                    className="inline h-7 w-auto align-middle"
+                    style={{ display: 'inline-block', verticalAlign: 'middle' }}
+                  />             
               </a>
             </div>
           </div>
