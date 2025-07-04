@@ -233,12 +233,12 @@ export default function HackathonPage() {
                 <div className="flex-grow">
                   <Card>
                     <CardContent className="p-6">
-                      <div className="flex justify-between items-start">
+                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                         <div>
                           <h3 className="text-xl font-semibold text-gray-900 mb-2">{event.title}</h3>
                           <p className="text-gray-600">{event.description}</p>
                         </div>
-                        <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
+                        <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium w-fit mt-2 sm:mt-0">
                           {event.date}
                         </span>
                       </div>
