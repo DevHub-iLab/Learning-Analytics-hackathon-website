@@ -171,7 +171,12 @@ export default function HackathonPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 text-lg"
+                  className="
+                    bg-indigo-600 hover:bg-indigo-700 text-white
+                    px-5 py-2 text-base
+                    sm:px-8 sm:py-3 sm:text-lg
+                    rounded-xl shadow-lg transition
+                  "
                   onClick={() => window.open("https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=SJPOFSq-K0aPwOF2WpsgSj392ylT8wdGmjkqzmxpPXhUMUJDVzROUzE3Q1JNUE1PUDEzM09QNk5TVS4u", "_blank")}
                 >
                   Pre-Register Now <ExternalLink className="ml-2 h-5 w-5" />
