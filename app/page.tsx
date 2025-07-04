@@ -1,12 +1,13 @@
 "use client"
 
+import Link from "next/link"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { ChevronDown, ChevronUp, Trophy, Calendar, Users, Target, Award, ExternalLink } from "lucide-react"
 
-export default function HackathonPage() {
+export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 
   const toggleFaq = (index: number) => {
@@ -86,17 +87,17 @@ export default function HackathonPage() {
       title: "Implementation Phase",
       description: "Develop and implement your solution with mentorship support."
     },
-        {
+    {
       date: "1st Oct 2025",
       title: "Demo and Presentation",
       description: "Showcase your solution to judges and peers."
     },
-        {
+    {
       date: "6th Oct - 4th Nov 2025",
       title: "Refining and Preparation",
       description: "Refine your solution and prepare for the final presentation."
     },
-        {
+    {
       date: "5th Nov 2025",
       title: "Award Ceremony",
       description: "Celebrate the winners and outstanding solutions."
@@ -104,105 +105,88 @@ export default function HackathonPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
-      {/* Navigation */}
-      <nav className="bg-indigo-800/50 backdrop-blur-sm border-b border-indigo-700/50 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
-            <div className="flex items-center space-x-8">
-              <a
-                href="#home"
-                className="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors"
-              >
-                Home
-              </a>
-              <a
-                href="#faq"
-                className="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors"
-              >
-                FAQ
-              </a>
-              <a
-                href="#prizes"
-                className="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors"
-              >
-                Prizes
-              </a>
-              <a
-                href="#sponsors"
-                className="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors"
-              >
-                Sponsors
-              </a>
-              <a
-                href="#timeline"
-                className="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors"
-              >
-                Timeline
-              </a>
-            </div>
+    <>
+      {/* Navbar */}
+      <nav className="w-full bg-[#4338CA] shadow-lg sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto flex items-center justify-between py-4 px-4">
+          <div className="flex items-center space-x-3">
+            <img src="/favicon.png" alt="Logo" className="w-8 h-8 rounded bg-white p-1" />
+            <span className="font-bold text-xl tracking-tight text-white">Innovation Lab</span>
+          </div>
+          <div className="flex space-x-6">
+            <Link href="#about" className="text-white hover:text-[#E0E7FF] text-base font-medium">About</Link>
+            <Link href="#resources" className="text-white hover:text-[#E0E7FF] text-base font-medium">Resources</Link>
+            <Link href="#events" className="text-white hover:text-[#E0E7FF] text-base font-medium">Events</Link>
+            <Link href="#timeline" className="text-white hover:text-[#E0E7FF] text-base font-medium">Timeline</Link>
+            <Link href="#faq" className="text-white hover:text-[#E0E7FF] text-base font-medium">FAQ</Link>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-white">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Reimagine Learning through Learning Analytics @ NTU Hackathon
-              </h1>
-              <p className="text-xl md:text-2xl mb-4 text-indigo-200 font-light">
-                Empower students with AI-driven learning solutions
-              </p>
-              <p className="text-lg mb-8 text-indigo-100 leading-relaxed">
-                Join us in collaboration with Imperial College London to innovate how students learn using AI, learning
-                sciences, and analytics. Make a real impact on the NTU learning experience.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 text-lg"
-                  onClick={() => window.open("https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=SJPOFSq-K0aPwOF2WpsgSj392ylT8wdGmjkqzmxpPXhUMUJDVzROUzE3Q1JNUE1PUDEzM09QNk5TVS4u", "_blank")}
-                >
-                  Pre-Register Now <ExternalLink className="ml-2 h-5 w-5" />
-                </Button>
-              </div>
-            </div>
-            <div className="flex justify-center">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                <div className="text-center text-white">
-                  <Calendar className="h-16 w-16 mx-auto mb-4 text-indigo-300" />
-                  <h3 className="text-2xl font-bold mb-4">Event Schedule</h3>
-                  <p className="text-lg mb-2">Pre-Registration Opens</p>
-                  <p className="text-indigo-200">4th July 2025</p>
-                </div>
-              </div>
-            </div>
+      <header className="py-20 bg-gradient-to-br from-[#4338CA] to-[#0F172A] text-center px-4">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-white leading-tight drop-shadow-xl">
+          Discover Generative AI Learning Resources
+        </h1>
+        <p className="max-w-xl mx-auto text-lg md:text-2xl text-[#E0E7FF] font-medium mb-8">
+          Explore curated courses, tutorials, and events on AI, creative technology, and analytics.
+        </p>
+        <a
+          href="#resources"
+          className="inline-block px-8 py-3 rounded-lg bg-[#857EDD] hover:bg-[#4338CA] text-white font-semibold shadow-lg transition"
+        >
+          Browse Resources
+        </a>
+      </header>
+
+      {/* Resources Section */}
+      <section id="resources" className="py-16 px-4 max-w-5xl mx-auto">
+        <h2 className="text-3xl font-bold text-[#E0E7FF] mb-10 text-center">Featured Resources</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Resource Card 1 */}
+          <div className="bg-[#1e2165] rounded-xl shadow-lg p-6 flex flex-col items-start hover:scale-[1.03] transition">
+            <h3 className="text-xl font-semibold text-white mb-2">Intro to Generative AI</h3>
+            <p className="text-[#E0E7FF] mb-4 flex-1">A beginner-friendly course covering the foundations of generative models and their applications.</p>
+            <a href="#" className="mt-auto text-[#857EDD] hover:text-white underline font-medium">Learn more</a>
+          </div>
+          {/* Resource Card 2 */}
+          <div className="bg-[#1e2165] rounded-xl shadow-lg p-6 flex flex-col items-start hover:scale-[1.03] transition">
+            <h3 className="text-xl font-semibold text-white mb-2">Hands-on GANs</h3>
+            <p className="text-[#E0E7FF] mb-4 flex-1">Step-by-step guide to building and training Generative Adversarial Networks.</p>
+            <a href="#" className="mt-auto text-[#857EDD] hover:text-white underline font-medium">Learn more</a>
+          </div>
+          {/* Resource Card 3 */}
+          <div className="bg-[#1e2165] rounded-xl shadow-lg p-6 flex flex-col items-start hover:scale-[1.03] transition">
+            <h3 className="text-xl font-semibold text-white mb-2">Creative Coding with AI</h3>
+            <p className="text-[#E0E7FF] mb-4 flex-1">Explore how AI can generate images, music, and text with creative code labs and projects.</p>
+            <a href="#" className="mt-auto text-[#857EDD] hover:text-white underline font-medium">Learn more</a>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">About the Hackathon</h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Since late 2024, NTU has been piloting Project NALA (NTU AI Learning Assistants), a university-wide
-                initiative to transform how students learn with AI. This hackathon challenges you to design analytics
-                solutions that help students become self-aware learners, ask better questions, plan their learning, and
-                visualize progress. In collaboration with Imperial College London, dive into learning science, design
-                thinking, and AI innovation to support effective learning at NTU.
-              </p>
-            </div>
-            <div className="flex justify-center">
-              <div className="bg-teal-500 rounded-full p-12">
-                <div className="text-white text-6xl font-mono">{"{ / }"}</div>
-              </div>
-            </div>
+      <section id="about" className="py-16 px-4 max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl font-bold text-[#857EDD] mb-6">About Innovation Lab</h2>
+        <p className="text-lg text-[#E0E7FF] mb-4">
+          The Innovation Lab @ CCDS is dedicated to empowering students and educators with the latest in AI and creative technology. Join our events, explore learning resources, and connect with a vibrant community!
+        </p>
+      </section>
+
+      {/* Events Section */}
+      <section id="events" className="py-16 px-4 max-w-5xl mx-auto">
+        <h2 className="text-3xl font-bold text-[#E0E7FF] mb-10 text-center">Upcoming Events</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Event Card 1 */}
+          <div className="bg-[#4338CA] rounded-xl shadow-xl p-6 text-white flex flex-col hover:scale-[1.02] transition">
+            <h3 className="text-xl font-bold mb-2">Generative AI Hackathon</h3>
+            <p className="mb-4 text-[#E0E7FF]">Compete, collaborate, and create with peers in our AI-powered hackathon series.</p>
+            <span className="inline-block px-4 py-1 rounded bg-[#857EDD] text-sm font-medium mt-auto">July 2025</span>
+          </div>
+          {/* Event Card 2 */}
+          <div className="bg-[#1e2165] rounded-xl shadow-xl p-6 text-white flex flex-col hover:scale-[1.02] transition">
+            <h3 className="text-xl font-bold mb-2">AI in Education Seminar</h3>
+            <p className="mb-4 text-[#E0E7FF]">Discover how generative AI is transforming classrooms and curriculum at NTU.</p>
+            <span className="inline-block px-4 py-1 rounded bg-[#4338CA] text-sm font-medium mt-auto">August 2025</span>
           </div>
         </div>
       </section>
@@ -325,9 +309,7 @@ export default function HackathonPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Sponsors & Partners</h2>
-     
           </div>
-
           {/* Sponsors Subsection */}
           <div className="mb-20">
             <div className="text-center mb-12">
@@ -343,7 +325,6 @@ export default function HackathonPage() {
               </div>
             </div>
           </div>
-
           {/* Partners Subsection */}
           <div>
             <div className="text-center mb-12">
@@ -368,6 +349,6 @@ export default function HackathonPage() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   )
 }
