@@ -31,12 +31,12 @@ export default function HackathonPage() {
     {
       question: "What are the stages of the competition?",
       answer:
-        "There are three stages: Ideation (workshops and proposal submission), Implementation (solution development with mentorship), and Presentation (student voting and final presentations at a joint conference).",
+        "There are three stages: Ideation, Implementation and Presentation. The Ideation stage will be a proposal submission. After advancing to stage 2, teams will implement their proposed ideas and present them physically for judging on the Competition Day. The top 3 winners will then refine and prepare for the award ceremony which will be a joint conference with Imperial College London.",
     },
     {
       question: "What skills or background do I need?",
       answer:
-        "No prior hackathon experience is required. Participants from all backgrounds—learning sciences, AI, design, or tech—are welcome. Workshops will help you get started.",
+        "No prior hackathon experience is required. Participants from all backgrounds including learning sciences, AI, design, or tech are welcome. Workshops will help you get started.",
     },
     {
       question: "How are winners selected?",
@@ -52,30 +52,55 @@ export default function HackathonPage() {
 
   const timelineEvents = [
     {
-      date: "Week 1-2",
-      title: "Registration & Team Formation",
-      description: "Register for the hackathon and form interdisciplinary teams",
+      date: "4th - 11th July 2025",
+      title: "Pre-Registration",
+      description: "Register for the hackathon and receive updates.",
     },
     {
-      date: "Week 3",
-      title: "Ideation Workshops",
-      description: "Attend workshops on learning analytics, AI, and design thinking",
+      date: "15th July 2025",
+      title: "Opening Ceremony",
+      description: "Kick-off the hackathon and learn more about the challenge.",
     },
     {
-      date: "Week 4",
-      title: "Proposal Submission",
-      description: "Submit your innovative learning analytics solution proposal",
+      date: "15th - 25th July 2025",
+      title: "Call for Participants",
+      description: "Form teams and officially sign up for the hackathon.",
     },
     {
-      date: "Week 5-8",
+      date: "4th - 6th Aug 2025",
+      title: "Training Sessions",
+      description: "Attend workshops and training sessions to prepare your team.",
+    },
+    {
+      date: "15th Aug 2025",
+      title: "Proposal Submission Deadline",
+      description: "Submit your team's proposal for the hackathon challenge.",
+    },
+    {
+      date: "22nd Aug 2025",
+      title: "Proposal Result Announcement",
+      description: "Find out if your team has been shortlisted for Stage 1."
+    },
+    {
+      date: "25th Aug - 30th Sep 2025",
       title: "Implementation Phase",
-      description: "Develop your solution with mentorship and guidance",
+      description: "Develop and implement your solution with mentorship support."
     },
-    {
-      date: "Week 9",
-      title: "Final Presentations",
-      description: "Present your solution at the joint conference with Imperial College London",
+        {
+      date: "1st Oct 2025",
+      title: "Demo and Presentation",
+      description: "Showcase your solution to judges and peers."
     },
+        {
+      date: "6th Oct - 4th Nov 2025",
+      title: "Refining and Preparation",
+      description: "Refine your solution and prepare for the final presentation."
+    },
+        {
+      date: "5th Nov 2025",
+      title: "Award Ceremony",
+      description: "Celebrate the winners and outstanding solutions."
+    }
   ]
 
   return (
@@ -141,7 +166,7 @@ export default function HackathonPage() {
                   className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 text-lg"
                   onClick={() => window.open("https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=SJPOFSq-K0aPwOF2WpsgSj392ylT8wdGmjkqzmxpPXhUMUJDVzROUzE3Q1JNUE1PUDEzM09QNk5TVS4u", "_blank")}
                 >
-                  Register Now <ExternalLink className="ml-2 h-5 w-5" />
+                  Pre-Register Now <ExternalLink className="ml-2 h-5 w-5" />
                 </Button>
               </div>
             </div>
@@ -150,7 +175,7 @@ export default function HackathonPage() {
                 <div className="text-center text-white">
                   <Calendar className="h-16 w-16 mx-auto mb-4 text-indigo-300" />
                   <h3 className="text-2xl font-bold mb-4">Event Schedule</h3>
-                  <p className="text-lg mb-2">Registration Open</p>
+                  <p className="text-lg mb-2">Pre-Registration Opens</p>
                   <p className="text-indigo-200">4th July 2025</p>
                 </div>
               </div>
@@ -166,7 +191,7 @@ export default function HackathonPage() {
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">About the Hackathon</h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Since late 2024, NTU has been piloting Project NALA (NTU AI Learning Assistants) — a university-wide
+                Since late 2024, NTU has been piloting Project NALA (NTU AI Learning Assistants), a university-wide
                 initiative to transform how students learn with AI. This hackathon challenges you to design analytics
                 solutions that help students become self-aware learners, ask better questions, plan their learning, and
                 visualize progress. In collaboration with Imperial College London, dive into learning science, design
@@ -300,18 +325,46 @@ export default function HackathonPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Sponsors & Partners</h2>
-            <p className="text-xl text-gray-600 mb-8">Supporting innovation in learning analytics</p>
-            <Button
-              size="lg"
-              className="bg-indigo-600 hover:bg-indigo-700 text-white"
-              onClick={() => window.open("mailto:sponsor@ntu.edu.sg", "_blank")}
-            >
-              Interested in Sponsoring? Contact Us
-            </Button>
+     
           </div>
-          <div className="text-center text-gray-500 py-16">
-            <p className="text-lg">Sponsor logos will be displayed here</p>
-            <p className="text-sm mt-2">Contact us to become a sponsor and support student innovation</p>
+
+          {/* Sponsors Subsection */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Sponsors</h2>
+            </div>
+            <div className="flex justify-center">
+              <div className="flex justify-center items-center">
+                <img
+                  src="images/NTU.jpg"
+                  alt="Nanyang Technological University Singapore"
+                  className="max-h-32 w-auto object-contain hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Partners Subsection */}
+          <div>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Partners</h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+              <div className="flex justify-center items-center">
+                <img
+                  src="images/imperialcollege.jpg"
+                  alt="Imperial College London"
+                  className="max-h-32 w-auto object-contain hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="flex justify-center items-center">
+                <img
+                  src="images/ilab.jpg"
+                  alt="iLab"
+                  className="max-h-32 w-auto object-contain hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -328,7 +381,7 @@ export default function HackathonPage() {
                 className="border-gray-600 text-gray-300 hover:bg-gray-800 bg-transparent"
                 onClick={() => window.open("https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=SJPOFSq-K0aPwOF2WpsgSj392ylT8wdGmjkqzmxpPXhUMUJDVzROUzE3Q1JNUE1PUDEzM09QNk5TVS4u", "_blank")}
               >
-                Register Now
+                Pre-Register Now
               </Button>
               <Button
                 variant="ghost"
